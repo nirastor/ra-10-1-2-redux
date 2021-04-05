@@ -8,16 +8,20 @@ export default function Form() {
   const workPrice = useSelector((state) => state.form.workPrice)
   const dispatch = useDispatch()
 
+  const stringToNumber = (s) => parseInt(s.replaceAll(/\s/g, ''), 10) 
+
   const onTextChange = (e) => dispatch(setWorkName(e.target.value))
-  const onPriceChange = (e) => dispatch(setWorkPrice(+e.target.value))
+  const onPriceChange = (e) => dispatch(setWorkPrice(e.target.value))
   
   const onFormSubmit = (e) => {
     e.preventDefault()
-    dispatch(addWork({id: Math.random(10000), workName: workName, workPrice: workPrice }))
+    if (!workName) return
+    const correctPrice = stringToNumber(workPrice) || '0'
+    dispatch(addWork({id: Math.random(10000), workName: workName, workPrice: correctPrice }))
     // не удалось сделть очистку формы через экшн.
     // Можно ли одним экшеном установить значения нескольких полей?
     dispatch(setWorkName(''))
-    dispatch(setWorkPrice(0))
+    dispatch(setWorkPrice(''))
   }
 
   return (

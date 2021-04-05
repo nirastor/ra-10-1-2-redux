@@ -4,7 +4,7 @@ export const formSlice = createSlice({
   name: 'form',
   initialState: {
     workName: '',
-    workPrice: 0,
+    workPrice: '',
   },
   reducers: {
     setWorkName: (state, action) => {
