@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import { nanoid } from 'nanoid'
 
 export const worksListSlice = createSlice({
   name: 'form',
@@ -27,16 +26,9 @@ export const worksListSlice = createSlice({
     clearFilter: (state) => {
       state.filter = ''
     }
-    // setWorkName: (state, action) => {
-    //   state.workName = action.payload
-    // },
-    // setWorkPrice: (state, action) => {
-    //   state.workPrice = action.payload
-    // },
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { addWork, delWork, updateWork, setFilter, clearFilter } = worksListSlice.actions
 
 export default worksListSlice.reducer
