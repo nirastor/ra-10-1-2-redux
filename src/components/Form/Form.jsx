@@ -7,7 +7,6 @@ export default function Form() {
   const workName = useSelector((state) => state.form.workName)
   const workPrice = useSelector((state) => state.form.workPrice)
   const editID = useSelector((state) => state.form.editID)
-  console.log(editID)
   const dispatch = useDispatch()
 
   const stringToNumber = (s) => parseInt(s.toString().replaceAll(/\s/g, ''), 10) 

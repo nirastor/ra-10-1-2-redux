@@ -28,6 +28,6 @@ li {
   font-family: 'Roboto', 'Segoe UI', Verdana, sans-serif;
 }
 
-.app-form {
+.app-form, .app-filter {
   margin-bottom: 20px;
 }
