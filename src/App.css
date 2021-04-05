@@ -5,13 +5,17 @@
   list-style-type: none;
 }
 
+body {
+  background-color: #f5f5f5;
+}
+
 .app {
   width: 80%;
   margin: 0 auto;
   padding: 40px 20px;
-  max-width: 600px;
+  max-width: 960px;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #fff;
   box-shadow: 0px 0px 10px 3px #aaaaaa;
   font-family: 'Roboto', 'Segoe UI', Verdana, sans-serif;
 }
