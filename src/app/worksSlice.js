@@ -10,6 +10,9 @@ export const worksListSlice = createSlice({
     ]
   },
   reducers: {
+    addWork: (state, action) => {
+      state.works.push(action.payload)
+    }
     // setWorkName: (state, action) => {
     //   state.workName = action.payload
     // },
@@ -20,6 +23,6 @@ export const worksListSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-// export const { setWorkName, setWorkPrice } = formSlice.actions
+export const { addWork } = worksListSlice.actions
 
 export default worksListSlice.reducer

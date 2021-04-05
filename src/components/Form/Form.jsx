@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setWorkName, setWorkPrice} from '../../app/formSlice'
+import { setWorkName, setWorkPrice } from '../../app/formSlice'
+import { addWork } from '../../app/worksSlice'
 
 export default function Form() {
   const workName = useSelector((state) => state.form.workName)
@@ -12,8 +13,11 @@ export default function Form() {
   
   const onFormSubmit = (e) => {
     e.preventDefault()
-    console.log(workName)
-    console.log(workPrice)
+    dispatch(addWork({id: Math.random(10000), workName: workName, workPrice: workPrice }))
+    // не удалось сделть очистку формы через экшн.
+    // Можно ли одним экшеном установить значения нескольких полей?
+    dispatch(setWorkName(''))
+    dispatch(setWorkPrice(0))
   }
 
   return (

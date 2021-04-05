@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const formSlice = createSlice({
   name: 'form',
   initialState: {
-    workName: 'Initial text',
-    workPrice: 12000,
+    workName: '',
+    workPrice: 0,
   },
   reducers: {
     setWorkName: (state, action) => {
@@ -17,6 +17,6 @@ export const formSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setWorkName, setWorkPrice } = formSlice.actions
+export const { setWorkName, setWorkPrice, clearForm } = formSlice.actions
 
 export default formSlice.reducer
