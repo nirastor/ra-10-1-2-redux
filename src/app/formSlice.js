@@ -24,7 +24,6 @@ export const formSlice = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { setWorkName, setWorkPrice, setBoth, setEditID } = formSlice.actions
 
 export default formSlice.reducer
