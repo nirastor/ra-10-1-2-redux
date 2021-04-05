@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function WorkItem({ workName, workPrice }) {
+export default function WorkItem({ item }) {
   return (
     <>
-      <span>{workName} </span>
-      <span>{workPrice}</span>
-      <button>Ред</button>
-      <button>Х</button>
+      <span className="mr1r">{item.workName}</span>
+      <span className="mr1r">{item.workPrice}</span>
+      <button className="mr1r">Редактировать</button>
+      <button>Удалить</button>
     </>
-  );
+  )
 }

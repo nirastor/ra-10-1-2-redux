@@ -3,10 +3,12 @@ import { useSelector } from 'react-redux'
 import WorkItem from '../WorkItem/WorkItem'
 
 export default function WorksList() {
-  const arr = useSelector((state) => state.worksList.works);
-  console.log(arr)
-  
-  const items = arr.map((item) => (<li key={item.id}><WorkItem /></li>))
+  const items = useSelector((state) => state.worksList.works)
+    .map((item) => (
+      <li key={item.id}>
+        <WorkItem item={item}/>
+      </li>)
+    )
   
   return (
     <ul className="app-list">

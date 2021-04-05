@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 
 export const worksListSlice = createSlice({
   name: 'form',
   initialState: {
     works: [
-      {id: nanoid(), workName: 'Замена стекла', workPrice: 1000 },
-      {id: nanoid(), workName: 'Замена всего', workPrice: 9000 },
+      {id: Math.random(10000), workName: 'Замена стекла', workPrice: 1000 },
+      {id: Math.random(10000), workName: 'Замена всего', workPrice: 9000 },
     ]
   },
   reducers: {

@@ -9,6 +9,14 @@ body {
   background-color: #f5f5f5;
 }
 
+li {
+  margin-bottom: 4px
+}
+
+.mr1r {
+  margin-right: 1rem;
+}
+
 .app {
   width: 80%;
   margin: 0 auto;
@@ -18,4 +26,8 @@ body {
   background-color: #fff;
   box-shadow: 0px 0px 10px 3px #aaaaaa;
   font-family: 'Roboto', 'Segoe UI', Verdana, sans-serif;
+}
+
+.app-form {
+  margin-bottom: 20px;
 }
