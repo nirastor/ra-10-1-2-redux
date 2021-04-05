@@ -16,6 +16,10 @@ export const worksListSlice = createSlice({
     delWork: (state, action) => {
       state.works = state.works.filter(w => w.id !== action.payload)
     },
+    updateWork: (state, action) => {
+      const index = state.works.findIndex(w => w.id === action.payload.id)
+      state.works[index] = action.payload
+    }
     // setWorkName: (state, action) => {
     //   state.workName = action.payload
     // },
@@ -26,6 +30,6 @@ export const worksListSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { addWork, delWork } = worksListSlice.actions
+export const { addWork, delWork, updateWork } = worksListSlice.actions
 
 export default worksListSlice.reducer

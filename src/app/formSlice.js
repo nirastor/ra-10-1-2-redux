@@ -5,6 +5,7 @@ export const formSlice = createSlice({
   initialState: {
     workName: '',
     workPrice: '',
+    editID: null
   },
   reducers: {
     setWorkName: (state, action) => {
@@ -13,10 +14,17 @@ export const formSlice = createSlice({
     setWorkPrice: (state, action) => {
       state.workPrice = action.payload
     },
+    setBoth: (state, action) => {
+      state.workName = action.payload.name
+      state.workPrice = action.payload.price
+    },
+    setEditID: (state, action) => {
+      state.editID = action.payload
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setWorkName, setWorkPrice, clearForm } = formSlice.actions
+export const { setWorkName, setWorkPrice, setBoth, setEditID } = formSlice.actions
 
 export default formSlice.reducer
